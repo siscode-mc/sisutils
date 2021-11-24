@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "template",
+  "version": "${version}",
+
+  "name": "template",
+  "description": "siscodemc's kotlin fabric template mod",
+  "authors": [
+    "roridev"
+  ],
+  "contact": {
+    "homepage": "https://github.com/siscode-mc/fabric-template",
+    "issues": "https://github.com/siscode-mc/fabric-template/issues",
+    "sources": "https://github.com/siscode-mc/fabric-template"
+  },
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "org.siscode.template.Template"
+      }
+    ]
+  },
+  "mixins": [
+	"template.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${fabric_loader}",
+    "fabric-language-kotlin": ">=${fabric_kt}",
+    "fabric": "*",
+    "minecraft": "1.17.x"
+  }
+}
