@@ -28,8 +28,8 @@
   ],
 
   "depends": {
-    "fabricloader": ">=${fabric_loader}",
-    "fabric-language-kotlin": ">=${fabric_kt}",
+    "fabricloader": ">=0.43.0+1.17",
+    "fabric-language-kotlin": ">=1.7.0+kotlin.1.6.0",
     "fabric": "*",
     "minecraft": "1.17.x"
   }

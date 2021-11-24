@@ -37,8 +37,6 @@ processResources {
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version
-		expand "fabric_kt": project.fabric_kt_version
-		expand "fabric_loader": project.loader_version
     }
 }
 
