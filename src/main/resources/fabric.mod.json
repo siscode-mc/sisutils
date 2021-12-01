@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "$project",
   "version": "${version}",
 
-  "name": "template",
-  "description": "siscodemc's kotlin fabric template mod",
+  "name": "$project_name",
+  "description": "$project_description",
   "authors": [
     "roridev"
   ],
   "contact": {
-    "homepage": "https://github.com/siscode-mc/fabric-template",
-    "issues": "https://github.com/siscode-mc/fabric-template/issues",
-    "sources": "https://github.com/siscode-mc/fabric-template"
+    "homepage": "$repo",
+    "issues": "$repo/issues",
+    "sources": "$repo"
   },
 
   "environment": "*",
@@ -19,18 +19,30 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "org.siscode.template.Template"
+        "value": "$group.$project.$entryPoint"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "$group.$project.$entryPointClient"
+      }
+    ],
+    "server": [
+      {
+        "adapter": "kotlin",
+        "value": "$group.$project.$entryPointServer"
       }
     ]
   },
   "mixins": [
-	"template.mixins.json"
+	"${project}.mixins.json"
   ],
-  "accessWidener": "template.accesswidener",
+  "accessWidener": "${project}.accesswidener",
   "depends": {
-    "fabricloader": ">=0.43.0+1.17",
-    "fabric-language-kotlin": ">=1.7.0+kotlin.1.6.0",
+    "fabricloader": ">=$loader",
+    "fabric-language-kotlin": ">=$kotlin",
     "fabric": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "$minecraft"
   }
 }
