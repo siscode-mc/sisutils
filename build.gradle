@@ -49,6 +49,12 @@ processResources {
                "entryPointClient" : project.project_entrypoint_client,
                "entryPointServer" : project.project_entrypoint_server
     }
+
+    filesMatching("${project_id}.mixins.json") {
+        expand "java_ver" : project.java_ver,
+               "project" : project.project_id,
+               "project_group" : project.project_group
+    }
 }
 
 def id = project.project_id
